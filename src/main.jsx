@@ -13,32 +13,36 @@ import About from './Pages/About/About';
 import ServiceDetail from './Pages/ServiceDetail/ServiceDetail';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
+import Error from './Pages/Error/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
-     {
-      path:'/',
-      element: <Home></Home>
-    },
-   {
-    path:'/about',
-    element: <About></About>
-  },
-    {
-      path:'/service',
-      element: <ServiceDetail></ServiceDetail>
-    },
-    {
-      path:'/register',
-      element: <Register></Register>
-    },
-    {
-      path:'/login',
-      element: <Login></Login>
-    }
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/about',
+        element: <About></About>
+      },
+      {
+        path: '/service/:id',
+        element: <ServiceDetail></ServiceDetail>,
+        loader: () => fetch('/Data/event.json')
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
+
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      }
     ]
   },
 ]);

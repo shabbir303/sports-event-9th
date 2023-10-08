@@ -1,7 +1,7 @@
 
 
 [
-    {
+    {   "id" : 1,
         "name": "Basketball Championship",
         "image_url": "https://i.ibb.co/Yf5Jm7F/full-shot-man-playing-basketball.jpg",
         "price": "$20.00",
@@ -9,10 +9,11 @@
         "event_area": "City Arena",
         "event_date_text": "July 15, 2023",
         "event_date_numeric": "2023-07-15",
-        "finish_time": "2:30 PM"
+        "finish_time": "2:30 PM",
+        "event_image":"https://i.ibb.co/FxYMv31/basketball.jpg"
     },
    
-    {
+    {   "id" : 2,
         "name": "Tennis Open",
         "image_url":  "https://i.ibb.co/s9sKf4b/tennis-balls-racket-court.jpg",
         "price": "$25.00",
@@ -20,9 +21,10 @@
         "event_area": "Tennis Club Grounds",
         "event_date_text": "September 10, 2023",
         "event_date_numeric": "2023-09-10",
-        "finish_time": "8:15 PM"
+        "finish_time": "8:15 PM",
+        "event_image":"https://i.ibb.co/VvYs7q9/tennis-open.jpg"
     },
-    {
+    {   "id" : 3,
         "name": "Golf Masters",
         "image_url": "https://i.ibb.co/t8GtCFV/view-golf-sport-equipment.jpg",
         "price": "$30.00",
@@ -30,10 +32,11 @@
         "event_area": "Golf Course",
         "event_date_text": "October 5, 2023",
         "event_date_numeric": "2023-10-05",
-        "finish_time": "5:45 PM"
+        "finish_time": "5:45 PM",
+        "event_image":"https://i.ibb.co/6ws9qV6/golf.jpg"
     },
     
-    {
+    {   "id" : 4,
         "name": "Swimming Gala",
         "image_url": "https://i.ibb.co/7CrZhS0/young-woman-enjoying-swimming-pool.jpg",
         "price": "$12.00",
@@ -41,9 +44,10 @@
         "event_area": "Aquatic Center",
         "event_date_text": "December 10, 2023",
         "event_date_numeric": "2023-12-10",
-        "finish_time": "8:00 PM"
+        "finish_time": "8:00 PM",
+        "event_image":"https://i.ibb.co/gWqyZq0/swimming.jpg"
     },
-    {
+    {   "id" : 5,
         "name": "Cricket World Cup",
         "image_url": "https://i.ibb.co/PjkfwTN/cricket-equipments-green-grass.jpg",
         "price": "$35.00",
@@ -51,9 +55,11 @@
         "event_area": "Cricket Stadium",
         "event_date_text": "July 30, 2023",
         "event_date_numeric": "2023-07-30",
-        "finish_time": "7:30 PM"
+        "finish_time": "7:30 PM",
+        "event_image":"https://i.ibb.co/P15Mnsd/cricket.webp"
+        
     },
-    {
+    {   "id" : 6,
         "name": "Football Championship",
         "image_url": "https://i.ibb.co/JcFPwgC/colombian-national-soccer-team.jpg",
         "price": "$25.00",
@@ -61,6 +67,7 @@
         "event_area": "Football Stadium",
         "event_date_text": "August 5, 2023",
         "event_date_numeric": "2023-08-05",
-        "finish_time": "9:00 PM"
+        "finish_time": "9:00 PM",
+        "event_image":"https://i.ibb.co/LZyT6Rs/football.jpg"
     }
 ]
