@@ -1,8 +1,34 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import { useContext } from "react";
+import { Authcontext } from "../../Provider/AuthProvider";
 
 
 const Register = () => {
+   const {createUser}  =  useContext(Authcontext);
+
+   const handleRegister = e =>{
+     e.preventDefault();
+    //  const Email = e.target.email.value;
+    //  const Password = e.target.password.value;
+    //  const Name = e.target.name.value;
+    //  console.log(Email, Password,Name);
+    const form = new FormData(e.currentTarget);
+    console.log(form);
+    const Name = form.get('name');
+    const Email = form.get('email');
+    const Password = form.get('password');
+    console.log(Name, Password, Email);
+    createUser(Email, Password)
+    .then(result =>{
+       console.log(result.user);
+    })
+    .catch(err=>{
+       console.log(err);
+    })
+
+  }
+
     return (
         
         <div>
@@ -16,10 +42,15 @@ const Register = () => {
   <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
     Enter your details to register.
   </p>
-  <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+  <form onSubmit={handleRegister}
+  className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
     <div className="mb-4 flex flex-col gap-6">
       <div className="relative h-11 w-full min-w-[200px]">
         <input
+          name='name'
+          type="text"
+         
+          required
           className=" h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
           placeHolder=" "
         />
@@ -29,6 +60,9 @@ const Register = () => {
       </div>
       <div className="relative h-11 w-full min-w-[200px]">
         <input
+        name='email'
+          type='email'
+          required
           className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
           
         />

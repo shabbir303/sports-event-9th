@@ -13,12 +13,12 @@ import Service from '../Service/Service';
 
 const Home = () => {
 
-    const styles ={
-        ".rfm-marquee": {
-            gap: "85px",
+    // const styles ={
+    //     ".rfm-marquee": {
+    //         gap: "85px",
             
-        }
-    }
+    //     }
+    // }
 
     const [sponsorData, setSponsorData] = useState([]);
     useEffect(()=>{
@@ -26,7 +26,7 @@ const Home = () => {
        .then(res=>res.json())
        .then(data => setSponsorData(data));
     },[])
-   console.log(sponsorData);
+//    console.log(sponsorData);
 
     return (
         <div>

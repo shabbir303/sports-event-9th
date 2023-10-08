@@ -1,7 +1,18 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Authcontext } from "../../Provider/AuthProvider";
 
 
 const Navbar = () => {
+      const {user, UserSignOut} = useContext(Authcontext);
+
+      const handleLogOut =()=>{
+         
+        UserSignOut()
+        .then(console.log('signOut successfully'))
+        .catch(error=>console.log(error))
+      } 
+
       const navLinks = <>
         <li className="text-[20px] font-[500] " ><NavLink to ='/'
           style={({ isActive, isPending }) => {
@@ -52,11 +63,22 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end mr-[50px]">
-    <p className="uppercase mr-3 font-[700]" >Sign UP for <br /> Updates</p>
+    {
+      user? '' :
+      <>
+         <p className="uppercase mr-3 font-[700]" >Sign UP for <br /> Updates</p>
     <input type="email" name="" id="" placeholder="ENTER YOUR EMAIL" className="py-[10px] px-[20px] bg-[#808B96] text-[#18BCE5] placeholder-white font-[500]  "  />
-    <Link to='/register'>
-    <a className="px-[20px] py-[10px]  text-white bg-gradient-to-r from-emerald-500 to-emerald-900 text-[20px] font-[500]">OK</a>
-    </Link>
+      </>
+    }
+
+    {
+      user ?
+       <button onClick={handleLogOut} className="font-[600] bg-gradient-to-r from-red-700 to-sky-500 py-[8px] rounded-md shadow-xl shadow-green-500/50 px-[20px]">LogOut</button> :
+      <Link to='/register'>
+      <a className="px-[20px] py-[10px]  text-white bg-gradient-to-r from-emerald-500 to-emerald-900 text-[20px] font-[500]">OK</a>
+      </Link>
+    }
+    
   </div>
 </div>
         </div>

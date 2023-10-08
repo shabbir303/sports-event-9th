@@ -1,8 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import { useContext } from "react";
+import { Authcontext } from "../../Provider/AuthProvider";
 
 
 const Login = () => {
+    const {login} = useContext(Authcontext);
+    const location = useLocation();
+    console.log(location);
+    const navigate = useNavigate();
+
+    const handleLogin =e =>{
+       e.preventDefault();
+       const form = new FormData(e.currentTarget);
+       console.log(form);
+       const email = form.get('email');
+       const password = form.get('password');
+       const name = form.get('name');
+       console.log(email, password, name);
+       login(email, password)
+       .then(result =>{
+         console.log(result.user);
+         navigate(location?.state? location.state: '/' );
+
+      })
+      .catch(err => console.log(err))
+    }
     return (
         <div>
             <Navbar></Navbar>
@@ -13,7 +36,8 @@ const Login = () => {
       Sign In
     </h3>
   </div>
-            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 px-[20px]">
+            <form onSubmit ={handleLogin}
+             className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 px-[20px]">
     <div className="mb-4 flex flex-col gap-6">
       <div className="relative h-11 w-full min-w-[200px]">
         <input
@@ -43,6 +67,7 @@ const Login = () => {
         <input
           type="password"
           name='password'
+          required
           className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
           
         />
