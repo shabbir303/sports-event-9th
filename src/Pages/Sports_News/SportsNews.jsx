@@ -11,7 +11,7 @@ const SportsNews = () => {
     },[])
 
     return (
-        <div className="mt-[200px] grid grid-cols-3 w-[85%] mx-auto gap-[40px] ">
+        <div className="mt-[200px] grid grid-cols-1 lg:grid-cols-3 w-[85%] mx-auto gap-[40px] ">
             {
               sports.map(sport=> <div className="shadow-xl">
                 <div>

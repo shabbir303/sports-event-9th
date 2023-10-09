@@ -65,7 +65,7 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <img src="https://i.ibb.co/qdj0vMb/logo-removebg-preview.png" alt="" className="ml-[130px]" />
+    <img src="https://i.ibb.co/qdj0vMb/logo-removebg-preview.png" alt="" className="w-[80px] lg:w-[300px] ml-[-10px] lg:ml-[130px]" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -76,20 +76,22 @@ const Navbar = () => {
     {
       user? <> </> :
       <>
-         <p className="uppercase mr-3 font-[700]" >Sign UP for <br /> Updates</p>
-    <input type="email" name="" id="" placeholder="ENTER YOUR EMAIL" className="py-[10px] px-[20px] bg-[#808B96] text-[#18BCE5] placeholder-white font-[500]  "  />
+         <p className="uppercase ml-2 lg:mr-3 font-[500] lg:font-[700] hidden lg:block" >Sign UP for <br /> Updates</p>
+    <input type="email" name="" id="" placeholder="ENTER YOUR EMAIL" className=" py-[4px] lg:py-[10px] px-[10px] lg:px-[20px] bg-[#808B96] text-[#18BCE5] placeholder-white font-[400] lg:font-[500]  w-[120px] lg:w-[200px] ml-[10px] "  />
       </>
     }
 
     {
       user ?
       <>
+      <div className="flex flex-col lg:flex-row gap-[0] lg:gap-[10px]">
       <h1>{user.displayName}</h1>
-      <img src={user.photoURL} alt="" />
+      <img src={user.photoURL} alt="" className="w-[30px] lg:w-[70px] h-[30px] lg:[70px]" />
+      </div>
        <button onClick={handleLogOut} className="font-[600] bg-gradient-to-r from-red-700 to-sky-500 py-[8px] rounded-md shadow-xl shadow-green-500/50 px-[20px]">LogOut</button>
       </> :
       <Link to='/register'>
-      <a className="px-[20px] py-[10px]  text-white bg-gradient-to-r from-emerald-500 to-emerald-900 text-[20px] font-[500]">OK</a>
+      <a className="px-[10px] lg:px-[20px] py-[5px] lg:py-[10px]  text-white bg-gradient-to-r from-emerald-500 to-emerald-900 text-[19px] lg:text-[20px] font-[500]">OK</a>
       </Link>
     }
     

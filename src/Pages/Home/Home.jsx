@@ -32,11 +32,12 @@ const Home = () => {
     return (
         <div>
             <div className="">
-                <img src="https://i.ibb.co/dWwTvhZ/champion.jpg" alt="" className="h-[800px] w-full bg-opacity-[10000] " />
+                <img src="https://i.ibb.co/dWwTvhZ/champion.jpg" alt="" className="h-[400px] lg:h-[800px] w-full bg-opacity-[10000] " />
                 <div className=''>
-                    <h1 className="text-[80px] uppercase absolute  top-[200px] text-white font-[800] left-[500px] " >Sports Event <br />Starts On</h1>
-                    <h1 className='font-bold text-[30px] absolute text-[#f5b847] top-[450px] left-[500px] uppercase ' >{moment().format("dddd, MMMM, D YYYY")}</h1>
-                    <h1 className='font-bold text-[30px] absolute text-[#f5b847] top-[500px] left-[500px] uppercase '>at {moment().format(" h:mm a")}</h1>
+                    <h1 className=" text-[30px] lg:text-[80px] uppercase absolute top-[170px] lg:top-[200px] text-white font-[800] left-[100px] lg:left-[500px] " >Sports Event <br />Starts On</h1>
+                    <h1 className='font-bold text-[20px] lg:text-[30px] absolute text-[#f5b847] top-[280px] lg:top-[450px] 
+                    left-[90px] lg:left-[500px] uppercase ' >{moment().format("dddd, MMMM, D YYYY")}</h1>
+                    <h1 className='font-bold text-[20px] lg:text-[30px] absolute text-[#f5b847] top-[310px] lg:top-[500px] left-[90px]  lg:left-[500px] uppercase '>at {moment().format(" h:mm a")}</h1>
 
                     <div className='text-center mt-[40px]'>
                         <h1 className='text-[30px] font-[800]' >VIP SPORT EVENTS AND HOSPITALITY</h1>
@@ -72,8 +73,8 @@ const Home = () => {
                     </div>
                     
                 </div>
-                <div className='w-full h-[280px] absolute bg-slate-900 opacity-[0.7] top-[1030px]   '> </div>
-                <div className='flex w-[70%] justify-center gap-[50px] mx-auto p-[30px] bg-[#BEF2C6] rounded-2xl my-[150px] '>
+                <div className='w-full h-[280px] absolute bg-slate-900 opacity-[0.7] top-[747px] lg:top-[1030px]   '> </div>
+                <div className='flex flex-col lg:flex-row w-[90%] lg:w-[70%] justify-center gap-[50px] mx-auto p-[30px] bg-[#BEF2C6] rounded-2xl my-[150px] '>
                     <img src="https://i.ibb.co/VVWD5qJ/sport-merch.jpg" alt="" className='w-[500px] h-[300px] rounded-xl' />
                    <div>
                    <h1 className='uppercase text-[#073822] text-[40px] font-[800] '>Unveiling Our Passion <br /> for Sports</h1>
@@ -97,7 +98,7 @@ const Home = () => {
 
                 <img src="https://i.ibb.co/VwXZK9k/olymic.jpg" alt="" className='mx-auto flex justify-center items-center  mt-[60px] rounded-2xl' />
                 <NavLink to='/sports'>
-                <button className="btn  btn-info absolute top-[350px] left-[840px] ">Sports Blog</button>
+                <button className="btn  btn-info absolute top-[85px] lg:top-[350px] left-[120px] lg:left-[840px] ">Sports Blog</button>
                 </NavLink>
             </div>
          <div className='mt-[80px]'>

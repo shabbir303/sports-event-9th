@@ -74,9 +74,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: 
+#### Answer: B
 
-<i></i>
+<i>Here the answer is B because we know Array index start on '0', and we replace it any other item we add other item in the index just declare it, example in the top here in the question</i>
 
 </p>
 </details>
@@ -99,9 +99,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>Here parameter is 'name', which means the function expects an argument to be passed when it is called. but here no argument in the parameter, so when we console the function parameter will be undefined</i>
 
 </p>
 </details>
@@ -127,9 +127,13 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>Here 1st index number is 0 , it is falsy value , so the count remains 0<br>
+ For 1, num is truthy, and count becomes 1.<br>
+For 2, num is truthy, and count becomes 2.<br>
+For 3, num is truthy, and count becomes 3.
+</i>
 
 </p>
 </details>

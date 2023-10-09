@@ -13,7 +13,7 @@ const Service = () => {
     }, [])
 
     return (
-        <div className="grid grid-cols-3 gap-[40px] w-[70%] mx-auto ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] w-[90%] mx-auto ">
             {
                 events.map((event => <div className="shadow-xl rounded-xl" >
 

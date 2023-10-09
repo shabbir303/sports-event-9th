@@ -85,7 +85,7 @@ const Register = () => {
     Enter your details to register.
   </p>
   <form onSubmit={handleRegister}
-  className="mt-8 mb-2 w-[500px]  border-[1px] px-[50px] py-[30px] bg-white shadow-2xl shadow-cyan-500/50 ">
+  className="mt-8 mb-2 w-[350px] lg:w-[500px]  border-[1px] px-[20px] lg:px-[50px] py-[30px] bg-white shadow-2xl shadow-cyan-500/50 ">
     <div className="mb-4 flex flex-col gap-6">
       <div className="relative h-11 w-full min-w-[200px]">
         <input
@@ -211,6 +211,8 @@ const Register = () => {
       </a>
       </Link>
     </p>
+
+    <btn className="btn btn-outline btn-secondary mt-[15px] gap-2 flex items-center">Also Register on <img src="https://i.ibb.co/Pr9wM4m/google.png" alt="" className="w-[50px] h-[30px]" /></btn>
   </form>
   {
      
