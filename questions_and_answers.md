@@ -23,9 +23,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>Here declare the variable name 'greeting' but in the console we find ". as a result javascript not  recognize the variable "greetign" and we find reference error in the console</i>
 
 </p>
 </details>
@@ -48,9 +48,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:C
 
-<i>Write your explanation here</i>
+<i>Because a variable is a number and b variable is a string, that's why the result is 12</i>
 
 </p>
 </details>
@@ -74,9 +74,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 
 
-<i>Write your explanation here</i>
+<i></i>
 
 </p>
 </details>
