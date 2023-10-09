@@ -16,6 +16,8 @@ import Login from './Pages/Login/Login';
 import Error from './Pages/Error/Error';
 import AuthProvider from './Provider/AuthProvider';
 import PrivateRoutes from './PrivateRoute/PrivateRoutes';
+import SportsNews from './Pages/Sports_News/SportsNews';
+import Footer from './Pages/Footer/Footer';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +46,15 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
-      }
+      },
+      {
+        path:'/sports',
+        element: <PrivateRoutes><SportsNews></SportsNews></PrivateRoutes>
+      },
+      {
+       path:'/footer',
+       element:<Footer></Footer>
+    }
     ]
   },
 ]);

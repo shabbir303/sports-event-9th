@@ -41,7 +41,9 @@ const ServiceDetail = () => {
                 <p> {service.short_description} </p>
             </div>
             <button onClick={handleTicket} className="btn btn-outline btn-info absolute  text-white top-[750px] left-[730px] text-[20px] shadow-cyan-600/80 shadow-xl ">Click here to get your ticket now</button>
-            <ToastContainer />
+            <ToastContainer
+              position="bottom-center"
+            />
         </div>
     );
 };

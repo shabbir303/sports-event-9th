@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Marquee from 'react-fast-marquee';
 import Sponsor from './Sponsor';
 import Service from '../Service/Service';
+import Footer from '../Footer/Footer';
 
 
 
@@ -92,8 +93,16 @@ const Home = () => {
                             <Service></Service>
                         </div>
             </div>
+            <div className='relative'>
 
-
+                <img src="https://i.ibb.co/VwXZK9k/olymic.jpg" alt="" className='mx-auto flex justify-center items-center  mt-[60px] rounded-2xl' />
+                <NavLink to='/sports'>
+                <button className="btn  btn-info absolute top-[350px] left-[840px] ">Sports Blog</button>
+                </NavLink>
+            </div>
+         <div className='mt-[80px]'>
+         <Footer></Footer>
+         </div>
 
         </div>
     );

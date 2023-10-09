@@ -41,6 +41,16 @@ const Navbar = () => {
             };
           }}
         >Service</NavLink></li>
+
+        <li className="text-[20px] font-[500] "><NavLink to='/sports'
+          style={({ isActive, isPending }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              color: isActive? "#0BDCB0" : "",
+              background: isActive? "none": '',
+            };
+          }}
+        >Sports Blog</NavLink></li>
         
       </>
     return (
@@ -64,7 +74,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end mr-[50px]">
     {
-      user? '' :
+      user? <> </> :
       <>
          <p className="uppercase mr-3 font-[700]" >Sign UP for <br /> Updates</p>
     <input type="email" name="" id="" placeholder="ENTER YOUR EMAIL" className="py-[10px] px-[20px] bg-[#808B96] text-[#18BCE5] placeholder-white font-[500]  "  />
@@ -73,7 +83,11 @@ const Navbar = () => {
 
     {
       user ?
-       <button onClick={handleLogOut} className="font-[600] bg-gradient-to-r from-red-700 to-sky-500 py-[8px] rounded-md shadow-xl shadow-green-500/50 px-[20px]">LogOut</button> :
+      <>
+      <h1>{user.displayName}</h1>
+      <img src={user.photoURL} alt="" />
+       <button onClick={handleLogOut} className="font-[600] bg-gradient-to-r from-red-700 to-sky-500 py-[8px] rounded-md shadow-xl shadow-green-500/50 px-[20px]">LogOut</button>
+      </> :
       <Link to='/register'>
       <a className="px-[20px] py-[10px]  text-white bg-gradient-to-r from-emerald-500 to-emerald-900 text-[20px] font-[500]">OK</a>
       </Link>

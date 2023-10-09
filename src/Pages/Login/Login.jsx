@@ -1,10 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Authcontext } from "../../Provider/AuthProvider";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+  const [loginError, setLoginError] = useState('');
+  const [loginSuccess, setLoginSuccess] = useState('');
+
     const {login} = useContext(Authcontext);
     const location = useLocation();
     console.log(location);
@@ -22,9 +26,21 @@ const Login = () => {
        .then(result =>{
          console.log(result.user);
          navigate(location?.state? location.state: '/' );
+        setLoginSuccess(result.user);
+        toast.success('Login Success')
+        if(result.user.emailVerified){
+          
+          toast.success("Login Successfull")}
+          else{
+            toast.error('Verifiy your Email First')
+         }
 
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+      setLoginError(err.message);
+      toast.error(err.message);
+    })
     }
     return (
         <div>
@@ -98,6 +114,10 @@ const Login = () => {
       </Link>
     </p>
   </form>
+  <ToastContainer
+   position='bottom-center'
+   autoClose={1000}
+  />
   </div>
         </div>
         </div>
